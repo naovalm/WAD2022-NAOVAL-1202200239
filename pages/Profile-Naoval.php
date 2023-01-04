@@ -1,8 +1,8 @@
 <?php 
     include 'config/connector_user.php';
 
-    $email = $_COOKIE['email'];
-    $query = mysqli_query($koneksi_user, "SELECT * FROM `user_naoval` WHERE email = '$email'");
+    $wallet = $_COOKIE['wallet'];
+    $query = mysqli_query($koneksi_user, "SELECT * FROM `login_user` WHERE wallet = '$wallet'");
     $data = mysqli_fetch_assoc($query);
 ?>
 
@@ -11,8 +11,8 @@
     <form action="config/editProfile.php" method="post" class="profile__form">
         <div class="top">
             <div class="mb-4">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control bg-light profile__input-email" id="email" value="<?= $email ?>" readOnly>
+                <label for="wallet" class="form-label">wallet</label>
+                <input type="wallet" name="wallet" class="form-control bg-light profile__input-wallet" id="wallet" value="<?= $wallet ?>" readOnly>
             </div>
             <div class="mb-4">
                 <label for="nama" class="form-label">Nama</label>
@@ -46,7 +46,7 @@
         </div>
         <input type="submit" name="update-profile" value="Update" class="profile__btn">
         <div class="home__footnote">
-            <img src="asset/logo-ead.png" alt="" class="home__logo">
+            <img src="images/logo-ead.png" alt="" class="home__logo">
             <p>NAOVAL_1202200239</p>
         </div>
     </form>

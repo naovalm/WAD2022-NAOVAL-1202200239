@@ -35,6 +35,7 @@ body {
 
 .navbar {
     padding: 1.5rem 8rem;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
 }
 
 .navbar.brown {
@@ -71,8 +72,12 @@ body {
     margin-left: auto;
 }
 
+.buy-status {
+    display: flex;
+}
+
 .navbar-nav {
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .nav-link,
@@ -173,9 +178,9 @@ body {
     width: 15rem;
 }
 
-.home__right {
+/* .home__right {
 
-}
+} */
 
 .home__right img {
     width: 100%;
@@ -208,7 +213,6 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
     grid-gap: 1.5rem;
-    width: 70%;
 }
 
 .form-rent > div {
@@ -273,12 +277,34 @@ body {
     color: #fff;
 }
 
+.nft-image-modal img {
+    border-radius: 10px;
+}
+
+.wallet-container {
+    border-radius: 10px;
+    background-color:#dff9fb;
+    padding: 10px 10px;
+}
+
 .detail__container,
 .edit__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: min-content;
     grid-gap: 5rem;
+}
+
+.nft-detail-payment {
+    margin: 85px 10px;
+}
+
+.container-payment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 2rem;
+    padding: 30px 30px;
 }
 
 .detail__img,
@@ -295,6 +321,14 @@ body {
 }
 
 .showroom {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    padding: 4rem 8rem;
+}
+
+.admin {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
@@ -360,7 +394,12 @@ body {
     display: flex;
     align-items: center;
     grid-gap: 1.5rem;
-    justify-self: end;
+}
+
+.card__cta-container-admin {
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5rem;
 }
 
 .card__cta-container a,
@@ -371,6 +410,20 @@ body {
     font-size: 1.4rem;
     font-weight: 500;
     color: #fff;
+    width: 280px;
+    text-align: center;
+}
+
+.card__cta-container-admin a,
+.card__cta-container-admin a:visited {
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    /* width: 280px; */
+    text-align: center;
 }
 
 .card__detail-btn {
@@ -383,7 +436,7 @@ body {
 
 .regis,
 .login {
-    background-image: url('../asset/banner.png');
+    background-image: url('../images/banner4.png');
     background-size: cover;
     background-position-y: -25rem;
     height: 100vh;
@@ -512,7 +565,7 @@ body {
     cursor: pointer;
 }
 
-.profile__input-email {
+.profile__input-wallet {
     border: none;
     background-color: #fff !important;
 }
@@ -574,4 +627,17 @@ body {
 
 .update-item {
     background-color: #E9E235;
+}
+
+.form-container {
+    box-shadow: #000;
+}
+
+.approved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }

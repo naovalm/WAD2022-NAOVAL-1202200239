@@ -10,46 +10,46 @@
 
     <div class="detail__header">
         <h1 class="detail__title form-title"><?= $data['nama_mobil'] ?></h1>
-        <p class="detail__desc form-desc">Detail Mobil <?= $data['nama_mobil'] ?></p>
+        <p class="detail__desc form-desc">Detail NFT <?= $data['nama_mobil'] ?></p>
     </div>
     <div class="detail__container">
-        <img src="asset/<?= $data['foto_mobil'] ?>" alt="" class="detail__img">
+        <img src="images/<?= $data['foto_mobil'] ?>" alt="" class="detail__img">
         <form action="" method="POST" class="detail__form form-rent">
             <div class="mb-4">
-                <label for="nama_mobil" class="form-label">Nama Mobil</label>
+                <label for="nama_mobil" class="form-label">Title</label>
                 <input type="text" name="nama_mobil" class="form-control bg-light" id="nama_mobil" value="<?= $data['nama_mobil'] ?>" readOnly>
             </div>
             <div class="mb-4">
-                <label for="nama_pemilik" class="form-label">Nama Pemilik</label>
-                <input type="text" name="nama_pemilik" class="form-control bg-light" id="nama_pemilik" value="Naoval-1202204043" readOnly>
+                <label for="nama_pemilik" class="form-label">NFT Owner</label>
+                <input type="text" name="nama_pemilik" class="form-control bg-light" id="nama_pemilik" value="<?=  $data['pemilik_mobil'] ?>" readOnly>
             </div>
             <div class="mb-4">
-                <label for="merk" class="form-label">Merk</label>
+                <label for="merk" class="form-label">Price</label>
                 <input type="text" name="merk" class="form-control bg-light" id="merk" value="<?= $data['merk_mobil'] ?>" readOnly>
             </div>
             <div class="mb-4">
-                <label for="date" class="form-label">Tanggal Beli</label>
+                <label for="date" class="form-label">Auction Date</label>
                 <input type="date" name="date" class="form-control" id="date" value="<?= $data['tanggal_beli']?>" readOnly>
             </div>
             <div class="mb-4">
-                <label for="deskripsi" class="form-label">Deskripsi</label>
+                <label for="deskripsi" class="form-label">Description</label>
                 <textarea id="deskripsi" name="deskripsi" rows="5" cols="30" placeholder="Masukkan deskripsi mobil.." readOnly><?= $data['deskripsi'] ?></textarea>
             </div>
             <div class="mb-4">
-                <label for="image" class="form-label">Foto</label>
+                <label for="image" class="form-label">NFT Image</label>
                 <input type="file" name="image" id="image" accept="image/*" disabled>
                 <p class='form-img-detail'>current image: <span><?= $data['foto_mobil'] ?></span></p>
             </div>
             <div class="mb-4">
-                <label class="form-label">Status Pembayaran</label>
+                <label class="form-label">Payment Status</label>
                 <div class="form-radio-container">
                     <div class="form-radio">
                         <input class="form-radio-input" type="radio" name="status_bayar" id="status1" <?php echo $data['status_pembayaran'] == 'lunas' ? 'checked' : '' ?> <?php echo $data['status_pembayaran'] == 'belum lunas' ? 'disabled' : '' ?>>
-                        <label class="form-radio-label" for="status1">Lunas</label>
+                        <label class="form-radio-label" for="status1">Paid</label>
                     </div>
                     <div class="form-radio">
                         <input class="form-radio-input" type="radio" name="status_bayar" id="status2" <?php echo $data['status_pembayaran'] == 'belum lunas' ? 'checked' : '' ?> <?php echo $data['status_pembayaran'] == 'lunas' ? 'disabled' : '' ?>>
-                        <label class="form-radio-label" for="status2">Belum Lunas</label>
+                        <label class="form-radio-label" for="status2">Not yet paid</label>
                     </div>
                 </div>
             </div>

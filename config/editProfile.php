@@ -1,7 +1,7 @@
 <?php 
         include "connector_user.php";
 
-        $email = $_POST['email'];
+        $wallet = $_POST['wallet'];
         $new_nama = $_POST['nama'];
         $new_noHP = $_POST['no_hp'];
         $new_password = $_POST['password'];
@@ -10,13 +10,13 @@
     
         if(!empty($new_password) && !empty($new_confirmPassword)) {
             if($new_password == $new_confirmPassword) {
-                $query = mysqli_query($koneksi_user, "UPDATE user_naoval SET nama='$new_nama', no_hp='$new_noHP', password='$new_password' WHERE email = '$email'");
+                $query = mysqli_query($koneksi_user, "UPDATE login_user SET nama='$new_nama', no_hp='$new_noHP', password='$new_password' WHERE wallet = '$wallet'");
                 header('Location: ../index.php');
             } else {
                 echo "Password doesn't match!";
             }
         } else {
-            $query = mysqli_query($koneksi_user, "UPDATE user_naoval SET nama='$new_nama', no_hp='$new_noHP' WHERE email = '$email'");
+            $query = mysqli_query($koneksi_user, "UPDATE login_user SET nama='$new_nama', no_hp='$new_noHP' WHERE wallet = '$wallet'");
             header('Location: ../index.php');
         }
 

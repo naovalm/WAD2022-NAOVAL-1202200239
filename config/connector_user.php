@@ -1,6 +1,6 @@
 <?php 
-    $dbhost = 'localhost:3306';
-    $dbname = 'wad_modul4_naoval';
+    $dbhost = 'localhost';
+    $dbname = 'databasekuis2';
     $dbuser = 'root';
     $dbpassword = '';
     

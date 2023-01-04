@@ -11,10 +11,10 @@
         $file_tmp = $_FILES['gambar']['tmp_name'];
         $status_bayar = $_POST['status_bayar'];
         
-        move_uploaded_file($file_tmp, '../asset/'.$gambar);
+        move_uploaded_file($file_tmp, '../images/'.$gambar);
         $query = mysqli_query($koneksi, "INSERT INTO showroom_naoval_table(nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran) VALUES('$nama_mobil','$nama_pemilik','$merk','$tglBeli','$deskripsi','$gambar','$status_bayar')");
 
         if($query) {
-            header('Location: ../index.php?page=myitem&message=add-item');
+            header('Location: ../index.php?page=admin&message=add-item');
         }
 ?>

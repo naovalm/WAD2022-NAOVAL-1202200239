@@ -7,12 +7,10 @@
     $dataGambar = mysqli_fetch_assoc($gambar);
 
     //Menghapus file gambar dari direktori folder
-    unlink('../asset/'.$dataGambar['foto_mobil']);
+    unlink('../images/'.$dataGambar['foto_mobil']);
     
     $result = mysqli_query($koneksi, "DELETE FROM showroom_naoval_table WHERE id_mobil=$id");
 
     if($result) {
-        header('Location: ../index.php?page=myitem&message=delete-item');
+        header('Location: ../index.php?page=admin&message=delete-item');
     }
-
-?>
